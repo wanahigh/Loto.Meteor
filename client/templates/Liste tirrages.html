@@ -1,11 +1,18 @@
+
 <template name="liste">
         <div id="trg"></div>
 
         <button onclick="retour()">Ancien tirrage</button>
     <script>
-        function retour(){
 
-         $('trg').HTML(Loto.find(a));
+    function retour() {
+
+            $('trg').html(Loto.find({
+                num : all
+            }));
+
         }
+
+
     </script>
 </template>
