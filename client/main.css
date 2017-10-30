@@ -1,4 +1,8 @@
-/* CSS declarations go here */
-#footer{
-    margin-top:100%;
+
+html{
+    background-image:url('im-500401232.jpg');
+}
+
+footer{
+    margin-top:80%;
 }

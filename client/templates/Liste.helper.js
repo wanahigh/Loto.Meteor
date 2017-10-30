@@ -1,6 +1,6 @@
 Meteor.subscribe('loto');
 Template.liste.events({
-    'click #toto'(event) {
+    'onclick #toto'(event) {
         event.preventDefault()
         var aff = Meteor.call('listing');
         $("push").html(aff);
