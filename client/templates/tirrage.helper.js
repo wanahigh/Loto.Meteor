@@ -3,6 +3,11 @@ Meteor.subscribe('loto');
 Template.tirrage.events({
     'click #gen' (event){
         event.preventDefault();
+
+
+
+
+
         a = new Array();
 
 
@@ -23,7 +28,7 @@ Template.tirrage.events({
              rnd1 = Math.floor(Math.random() * 51)
         }
         else {
-            a.push({num: rnd1});
+            a.push({num1: rnd1});
             $(result1).html(rnd1)
 
         }
@@ -34,7 +39,7 @@ Template.tirrage.events({
             rnd2 = Math.floor(Math.random() * 51)
         }
         else {
-            a.push({num: rnd2});
+            a.push({num2: rnd2});
             $(result2).html(rnd2)
 
         }
@@ -45,7 +50,7 @@ Template.tirrage.events({
             rnd3 = Math.floor(Math.random() * 51)
         }
         else {
-            a.push({num: rnd3});
+            a.push({num3: rnd3});
             $(result3).html(rnd3)
 
         }
@@ -56,7 +61,7 @@ Template.tirrage.events({
             rnd4 = Math.floor(Math.random() * 51)
         }
         else {
-            a.push({num: rnd4});
+            a.push({num4: rnd4});
             $(result4).html(rnd4)
 
         }
@@ -68,7 +73,7 @@ Template.tirrage.events({
 
         }
         else {
-            a.push({num: rnd5});
+            a.push({num5: rnd5});
             $(result5).html(rnd5)
 
         }
@@ -77,7 +82,6 @@ Template.tirrage.events({
 
 
     },
-
 
 
 

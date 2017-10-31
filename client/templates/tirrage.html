@@ -11,26 +11,37 @@
                     <div style="border:1px solid black;background-color:yellow;border-radius: 100%;width:2em;height:2em;" id="result2"></div>
                     <div style="border:1px solid black;background-color:greenyellow;border-radius: 100%;width:2em;height:2em;" id="result3"></div>
                     <div style="border:1px solid black;background-color:magenta;border-radius: 100%;width:2em;height:2em;" id="result4"></div>
-                    <div style="border:1px solid ;background-color:black;color:white;border-radius: 100%;width:2em;height:2em;" id="result5"></div>
-                </div>
+                    <div style="border:1px solid white ;background-color:black;color:white;border-radius: 100%;width:2em;height:2em;" id="result5"></div>
+                </div>d-action">
+
                 <div class="card-action">
                        <a id="gen" class="waves-effect waves-light btn-large">Get Lucky !</a>
                     <a id="rem" class="waves-effect waves-light btn-large">Drop Database</a>
                 </div>
             </div>
         </div>
-    </div>
+</div>
 
-    <div>
+
 
         <ul>
         {{#each loto}}
            <li>
                <ul>
                    {{#each tableau}}
-                   <li>
-                       <div id="result">{{num}}</div>
+                   <li>  <div class="card horizontal">
 
+                       </div>
+                       <div class="card-stacked">
+                       <div style="display:inline-flex;" class="card-content">
+                       <div style="border:1px solid black;background-color:red;border-radius: 100%;width:2em;height:2em; " id="result">{{num}}</div>
+                       <div style="border:1px solid black;background-color:cyan;border-radius: 100%;width:2em;height:2em;" id="result1">{{num1}}</div>
+                       <div style="border:1px solid black;background-color:yellow;border-radius: 100%;width:2em;height:2em;" id="result2">{{num2}}</div>
+                       <div style="border:1px solid black;background-color:greenyellow;border-radius: 100%;width:2em;height:2em;" id="result3">{{num3}}</div>
+                       <div style="border:1px solid black;background-color:magenta;border-radius: 100%;width:2em;height:2em;" id="result4">{{num4}}</div>
+                       <div style="border:1px solid white ;background-color:black;color:white;border-radius: 100%;width:2em;height:2em;" id="result5">{{num5}}</div>
+                       </div>
+                       </div>
                     </li>
                {{/each}}
                     </ul>
@@ -39,7 +50,7 @@
         {{/each}}
 
         </ul>
-    </div>
+
 
 
 
