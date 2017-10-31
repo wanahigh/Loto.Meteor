@@ -1,8 +1,21 @@
 
 html{
-    background-image:url('im-500401232.jpg');
+    background-image:url('b31918e973bf78052ba522cccb6fbd7b--tumblr-backgrounds-backgrounds-wallpapers.jpgs');
 }
 
 footer{
     margin-top:80%;
+}
+
+li{
+    display:inline-block;
+}
+#result1,#result2,#result3,#result3,#result4,#result5{
+    display:flex;
+    border:1px solid ;
+    background-color:black;
+    color:white;
+    border-radius: 100%;
+    width:2em;
+    height:2em;
 }

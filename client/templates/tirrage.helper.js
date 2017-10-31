@@ -3,60 +3,99 @@ Meteor.subscribe('loto');
 Template.tirrage.events({
     'click #gen' (event){
         event.preventDefault();
-
-        var rst = Math.random() * 50;
-        var rnd =  (Math.round(rst));
-        $(result).html(Math.round(rst))+',';
-        var rst1 = Math.random() * 50;
-        var rnd1 = (Math.round(rst1));
-        $(result1).html(Math.round(rst1))+',';
-        var rst2 = Math.random() * 50;
-        var rnd2 = (Math.round(rst2));
-        $(result2).html(Math.round(rst2))+',';
-        var rst3 = Math.random() * 50;
-        var rnd3 = (Math.round(rst3));
-        $(result3).html(Math.round(rst3))+',';
-        var rst4 = Math.random() * 50;
-        var rnd4 = (Math.round(rst4));
-        $(result4).html(Math.round(rst4))+',';
-        var rst5 = Math.random() * 50;
-        var rnd5 = (Math.round(rst4))
-        $(result5).html(Math.round(rst4))+',';
-
-
         a = new Array();
-        a.push({num:rnd});
-        a.push({num:rnd1});
-        a.push({num:rnd2});
-        a.push({num:rnd3});
-        a.push({num:rnd4});
-        a.push({num:rnd5});
 
-        var doc = {
-            names: a
+
+        var rnd = Math.floor(Math.random() * 51)
+
+        if(a.indexOf(rnd)!=(-1)){
+            rnd = Math.floor(Math.random() * 51)
+        }
+        else {
+            a.push({num: rnd});
+            $(result).html(rnd)
 
         }
 
-        Loto.insert(a);
+        var rnd1 = Math.floor(Math.random() * 51)
+
+        if(a.indexOf(rnd1)!=(-1)){
+             rnd1 = Math.floor(Math.random() * 51)
+        }
+        else {
+            a.push({num: rnd1});
+            $(result1).html(rnd1)
+
+        }
+
+        var rnd2 = Math.floor(Math.random() * 51)
+
+        if(a.indexOf(rnd2)!=(-1)){
+            rnd2 = Math.floor(Math.random() * 51)
+        }
+        else {
+            a.push({num: rnd2});
+            $(result2).html(rnd2)
+
+        }
+
+        var rnd3 = Math.floor(Math.random() * 51)
+
+        if(a.indexOf(rnd3)!=(-1)){
+            rnd3 = Math.floor(Math.random() * 51)
+        }
+        else {
+            a.push({num: rnd3});
+            $(result3).html(rnd3)
+
+        }
+
+        var rnd4 = Math.floor(Math.random() * 51)
+
+        if(a.indexOf(rnd4)!=(-1)){
+            rnd4 = Math.floor(Math.random() * 51)
+        }
+        else {
+            a.push({num: rnd4});
+            $(result4).html(rnd4)
+
+        }
+
+        var rnd5 = Math.floor(Math.random() * 11)
+
+        if(a.indexOf(rnd5)!=(-1)){
+            rnd5 = Math.floor(Math.random() * 11)
+
+        }
+        else {
+            a.push({num: rnd5});
+            $(result5).html(rnd5)
+
+        }
+
+        Meteor.call('listing',a);
+
+
     },
+
+
+
+
     'click #rem' (event){
         event.preventDefault();
 
 
         Meteor.call('remove')
-    },
-
-    'click #toto' (event) {
-        event.preventDefault();
-        $("push").html('listing');
     }
 });
 
 Template.tirrage.helpers({
-    liste : function(){
+    loto : function(){
 
-   return Meteor.call('listing');
+   return Loto.find({});
 
     }
 
+
 });
+
