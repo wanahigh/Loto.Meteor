@@ -1,6 +1,8 @@
 
-html{
-    background-image:url('b31918e973bf78052ba522cccb6fbd7b--tumblr-backgrounds-backgrounds-wallpapers.jpgs');
+html,body{
+    background-color:yellow;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 footer{
@@ -9,4 +11,23 @@ footer{
 
 #display{
     display:inline-block;
+}
+
+
+.result{
+    opacity:0.4;
+}
+
+
+div .nav-wrapper{
+    padding:50vh;
+    margin:50vh;
+
+}
+div.card-content{
+   margin:auto;
+}
+
+div .card-stacked tear{
+
 }

@@ -78,7 +78,22 @@ Template.tirrage.events({
 
         }
 
+
+
+        $(document).ready(function(){
+            $("#gen").click(function(){
+                var div = $(".result");
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '4vw'}, "slow");
+                div.animate({marginLeft: '1VW'}, "slow");
+                div.animate({opacity: '1',}, "slow");
+            });
+        });
+
+
+
         Meteor.call('listing',a);
+
 
 
     },
